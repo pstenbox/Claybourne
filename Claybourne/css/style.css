@@ -1,0 +1,1135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000;
+    /* font-family: "futura-pt-bold", sans-serif; */
+    /* font-weight: 700; */
+    /* font-style: normal; */
+    font-family: 'DINBold', sans-serif;
+}
+
+main{
+    justify-content: center;
+    display: flex;
+}
+
+.congratulations_popup{
+    display: none;
+}
+
+.pageFrame{
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    background-image: url('../images/backgroundTilesDark.png');
+    /* background-repeat: repeat-y; */
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .pageFrame::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/bgglow.png');
+} */
+
+/* Brush */
+@font-face {
+    font-family: 'brushsci';
+    src: url('../fonts/brushsci.ttf') format('truetype');
+}
+
+/* DIN Black Alternate */
+@font-face {
+    font-family: 'DINBlackAlternate';
+    src: url('../fonts/DIN-BlackAlternate.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* DIN Bold */
+@font-face {
+    font-family: 'DINBold';
+    src: url('../fonts/DIN-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* DIN Light */
+@font-face {
+    font-family: 'DINLight';
+    src: url('../fonts/DIN-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* DIN Medium */
+@font-face {
+    font-family: 'DINMedium';
+    src: url('../fonts/DIN-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* DIN Regular */
+@font-face {
+    font-family: 'DINRegular';
+    src: url('../fonts/DIN-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.introAnimation{
+    /* background-image: url('../images/backgroundTiles.pngGrouped.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none !important; */
+}
+
+.frameContent{
+    text-align: center;
+}
+
+.main_logo{
+    /* margin-bottom: -4em; */
+    margin: 3em 0;
+}
+
+.pageFrame h1,
+.pageFrame h2 {
+    color: #ffffff;
+}
+
+.age_check_buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1.2em;
+}
+
+.age_check_buttons button{
+    width: 120px;
+    height: 35px;
+    background: transparent;
+    outline: 1px solid #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 19px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+}
+
+.button_selected{
+    background: #B19132 !important;
+    outline: 1px solid #B19132 !important;
+    color: #000000 !important;
+    cursor: pointer;
+    border-radius: 57px;
+}
+
+.selected_quiz_answer{
+    background: #ffffff !important;
+    outline: 1px solid #ffffff !important;
+    border: none !important;
+    color: #B19132 !important;
+    cursor: pointer;
+
+}
+
+.provinceContainer{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+
+.sectionSpacer{
+    margin-top: 2.3em;
+}
+
+#provinceSelect{
+    width: 70px;
+    height: 25px;
+    /* text-align: center; */
+    font-family: "futura-pt", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.store_details_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6em;
+    position: relative;
+    max-width: 250px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.store_details_form input[type=text], .input_field_default{
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    height: 28px;
+}
+
+.store_details_form ::-webkit-input-placeholder{
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+}
+
+.default_btn{
+    outline: none;
+    border: none;
+    width: 250px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 1.3em;
+    /* letter-spacing: -2px; */
+}
+
+.age_gate_submit_btn{
+    outline: none;
+    border: none;
+    width: 250px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 1.3em;
+    font-family: "DINBold";
+    /* letter-spacing: -2px; */
+}
+
+.store_details_form input[name="store_name"] {
+    margin-top: 1em;
+}
+
+.store_details_form input[name="store_pincode"] {
+    margin-top: 1.3em;
+}
+
+.tooltipSelector{
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    position: absolute;
+    bottom: 5.7em;
+    right: .3em;
+    cursor: pointer;
+}
+
+.footerPrint{
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 16px;
+    color: #ffffff;
+    font-family: "nitti", monospace;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 4.5em;
+    font-size: 12px;
+}
+
+.footerPrint span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pageFrame h1{
+    /* text-transform: uppercase; */
+    font-family: 'DINBold';
+    letter-spacing: 0px;
+
+}
+
+.quiz_finish_desc{
+    font-size: 32px;
+    margin-top: 1em;
+    line-height: 30px;
+    color: #FFFFFF;
+    font-family: 'DINBold';
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.quizAnswerGuide h1{
+    font-size: 20px;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.quizAnswerGuide h2{
+    font-size: 14px;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+.cafe_delight_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: .5em; */
+}
+
+.cafe_delight_description h1{
+    font-size: 20px;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    /* margin: 1em 0; */
+}
+
+.divider{
+    width: 80%;
+    height: 1px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+
+.cafe_delight_description p{
+    line-height: 16px;
+    color: #ffffff;
+    font-family: "nitti", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    max-width: 350px;
+    margin-top: 1.9em;
+}
+
+.sativa_chart_desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sativa_chart_desc h1{
+    color: #FFFFFF;
+    font-size: 28px;
+    letter-spacing: .1em;
+}
+
+.education_portal_submitBtn{
+    margin-top: 2.8em;
+}
+
+.quiz_question{
+    width: 250px;
+    margin: 0 auto;
+}
+
+.multiple_choice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    margin-top: 2.5em;
+}
+
+.multiple_choice p{
+    color: #ffffff;
+    /* font-family: "nitti", monospace;
+    font-weight: 400; */
+    font-family: 'DINBold';
+    font-style: normal;
+    border: 1px solid #fff;
+    max-width: 300px;
+    min-width: 300px;
+    padding: 1.2em 1em;
+    line-height: 18px;
+    font-size: 21px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    white-space: nowrap;
+    /* letter-spacing: -4px; */
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+}
+
+
+.quiz_submit_btn{
+    margin-top: 4em;
+}
+
+.current_quiz_question{
+    margin-top: 1em;
+    color: #ffffff;
+    font-family: "nitti", monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.yellow_popup{
+    background: #FCB315;
+    position: absolute;
+    top: 20%;
+    height: 430px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 2em;
+}
+
+.yellow_popup h2,
+.yellow_popup p{
+    color: #000000 !important;
+}
+
+.yellow_popup img{
+    margin-top: 1.5em;
+}
+
+.yellow_popup p{
+    font-family: "nitti", monospace;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    max-width: 230px;
+    line-height: 19px;
+    margin-top: 1.3em;
+}
+
+.quiz_black_btn{
+    cursor: pointer;
+    font-family: "nitti", monospace;
+    font-weight: 600;
+    font-style: normal;
+    color:#ffffff;
+    background: #000000;
+    border: none;
+    outline: none;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 2em;
+}
+
+.pageFrame{
+    position: relative;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Ensure this is below the popup z-index if it's specified */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.content-blur{
+    filter: blur(5px);
+}
+
+.yellow_popup, .tooltipGuide {
+    z-index: 2; /* Ensures content and popup are above the overlay */
+}
+
+.try_again_popup p{
+    margin-top: 4em;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 270px;
+}
+
+.customer_details h1{
+    font-size: 22px;
+    margin-bottom: .2em;
+}
+
+.thankYou h1{
+    font-size: 28px;
+}
+
+.how_to_earn_more_btn{
+    font-size: 15px;
+    height: 55px;
+    margin-top: 5em;
+    display: none;
+}
+
+.pinsGuide{
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pinsGuide h2{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.pinsGuide img{
+    margin-top: 1em;
+}
+
+.pinsGuide h2:last-of-type {
+    margin-top: 1.5em;
+}
+
+.tooltipGuide{
+    position: absolute;
+    bottom: 11em;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 80%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tooltipGuide h1{
+    font-size: 20px;
+    font-family: "nitti", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 230px;
+    line-height: 20px;
+}
+
+.close_tool_tip{
+    position: absolute;
+    font-family: "nitti", monospace;
+    top: 0;
+    right: .5em;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+
+}
+
+.termsPolicy h1, .policyPages h1{
+    font-size: 32px;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    color: #B19132;
+}
+
+.termsPolicy h2, .policyPages h2{
+    font-size: 23px;
+    text-align: left;
+    margin-left: 1.6em;
+    margin-top: 1.7em;
+    color: #B19132;
+}
+
+.termsPolicy p, .policyPages p, .policyPages ul li{
+    font-size: 13px;
+    line-height: 17px;
+    text-align: left;
+    margin-left: 3em;
+    color: #ffffff;
+    max-width: 350px;
+    font-family: "DINBold", sans-serif;
+    font-weight: 400;
+    margin-top: .7em;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.suggestions-container {
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    z-index: 1000;
+    width: 200px; /* Match the input field width */
+    background-color: #fff;
+    display: none; /* Initially hidden */
+    top: 5.5em;
+    left: 85px;
+    width: 252px;
+    max-height: 160px;
+    overflow-y: scroll;
+}
+
+#storeNameSuggestions{
+    top: 3em;
+    
+}
+
+.suggestions-container p {
+    margin: 0;
+    padding: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "nitti", monospace;
+    font-weight: 400;
+    border-top: 1px solid #c3c3c3;
+}
+
+.suggestions-container p:hover {
+    background-color: #f0f0f0;
+}
+
+.ageGate, 
+.educationPortal,
+.questionPortal,
+.spintowin,
+.dataCapture,
+.thankYou,
+.morePinsGuide,
+.termsPolicy,
+.sellSheet,
+.rulesPage
+.privacyPolicy{
+    display: none;
+}
+
+.yellow_popup{
+    display: none;
+}
+
+.ageGate{
+    display: flex;
+}
+
+.pageFrame {
+    display: none;
+}
+
+.policyPages{
+   height: 2000px;
+}
+
+#wheel-container {
+    position: relative;
+    transform: scale(0.9);
+}
+
+#wheel {
+    width: 100%;
+}
+
+#arrow {
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    z-index: 10;
+    
+    /* Adjust width as necessary */
+}
+
+#centercap{
+    position: absolute;
+    top: 9.3em;
+    transform: translateX(-50%) scale(0.6);
+    left: 50%;
+
+}
+
+#prize-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#next-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quick-start-btn{
+  margin-top: 1em;
+  margin-bottom: 1em;  
+}
+
+.pageFrame.introAnimation {
+    display: block;
+}
+
+.hideIntroVideo{
+    display: none !important;
+}
+
+#introVideo{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.pageFrame.outroAnimation {
+    display: block;
+}
+
+.hideOutroVideo{
+    display: none !important;
+}
+
+#outroVideo{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+input, select, textarea, button {
+    font-size: 16px; /* Minimum size to prevent zoom on iOS */
+}
+
+/* Updated Changes */
+.delightresintitle{
+    font-size: 20px !important;
+    max-width: 350px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    margin: 1em 0 !important;
+    color: #FCB315 !important;
+}
+
+.productCollectionTitle{
+    margin-top: -3em !important;
+}
+
+.vanillaimageresin{
+    margin: .5em 0 !important;
+    margin-bottom: -3em !important;
+}
+
+/* New Stuff */
+.pageFrameCheckeredFooter {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 3em;
+    width: 100%; /* Ensure it spans the entire width */
+    height: 50px; /* Set a height that fits your design */
+    background-image: url('../images/new/checkeredTiles.png');
+    background-repeat: repeat-x;
+}
+
+.audio_section{
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    cursor: pointer;
+}
+
+.default_btn{
+    font-family: 'DINBold', sans-serif;
+    letter-spacing: 0px;
+
+}
+
+.bud-descripter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.bud-descripter p{
+    max-width: 280px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 21px;
+}
+
+.multiple_choice p.selected_quiz_answer {
+    background-color: gold; /* Highlight correct answer */
+}
+
+.multiple_choice p.incorrect {
+    background-color: red; /* Highlight incorrect answer */
+}
+
+.multiple_choice p {
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.smokeAnimation {
+    position: absolute;
+    bottom: -100%; /* Start below the screen */
+    left: 0;
+    width: 100%;   /* Full screen width */
+    height: 100%;  /* Full screen height */
+    z-index: 9999;  /* Ensure it appears above other elements */
+    pointer-events: none; /* Prevent it from interfering with clicks */
+    animation: smokeSlideUp 3s cubic-bezier(0.42, 0, 0.58, 1) forwards; /* Custom easing */
+}
+
+/* The keyframes for the sliding animation */
+@keyframes smokeSlideUp {
+    0% {
+        bottom: -100%; /* Start completely off the screen at the bottom */
+    }
+    100% {
+        bottom: 100%; /* Move completely off the screen at the top */
+    }
+}
+
+.questionPortal{
+    position: relative;
+    overflow: hidden;
+}
+
+.smokeAnimation img {
+    width: 100%;    /* Fill the container */
+    height: auto;
+    object-fit: cover;
+}
+
+.flagAnimation{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+
+.flagAnimation {
+    position: absolute;
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s forwards, realisticWave 5s infinite ease-in-out; /* Realistic wave effect */
+    transform-origin: left center; /* Make the waving pivot from the flagpole side */
+}
+
+.flagAnimation img{
+    width: 100%;
+}
+
+/* Fade-in keyframe animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Realistic flag waving animation */
+@keyframes realisticWave {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) skewX(0deg) scaleX(1); /* Start from a neutral position */
+    }
+    10% {
+        transform: translate(-50%, -50%) rotate(5deg) skewX(1deg) scaleX(1.02); /* Slight wave to the right */
+    }
+    25% {
+        transform: translate(-48%, -50%) rotate(-5deg) skewX(-2deg) scaleX(1.03); /* Wave to the left with slight horizontal shift */
+    }
+    40% {
+        transform: translate(-52%, -50%) rotate(6deg) skewX(1.5deg) scaleX(1.01); /* A bit more exaggerated right wave */
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(-4deg) skewX(-1deg) scaleX(1); /* Back to the left */
+    }
+    75% {
+        transform: translate(-48%, -50%) rotate(4deg) skewX(0.5deg) scaleX(1.02); /* Small wave back to the right */
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg) skewX(0deg) scaleX(1); /* Return to neutral position */
+    }
+}
+
+.store_details_form input[type=text]{
+    font-family: "DINBold", sans-serif;
+    letter-spacing: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.input_field_default{
+    font-family: "DINBold", sans-serif;
+    letter-spacing: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dropdownSizeShirt{
+    color: #B19132;
+}
+
+.skillTestingNumberValue::placeholder {
+    color: #B19132; /* Change the placeholder color */
+    opacity: 1; /* Ensure the placeholder is fully visible */
+}
+
+.meterBar{
+    position: relative;
+    top: 0.8em;
+}
+
+.quiz_finish_image{
+    width: 130px;
+}
+
+.transitionScene{
+    position: absolute;
+    width: 400px;
+    left: 0;
+}
+
+/* Full-Screen Video Container */
+#globalTransitionScene {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: -10px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Make sure it is on top of other elements */
+}
+
+/* Video Settings */
+#globalTransitionVideo {
+    max-width: 450px;
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    margin: 0; /* Make sure there's no additional margin */
+    padding: 0;
+    box-sizing: border-box; /* Prevent padding from adding to the width */
+}
+
+#flag-animation {
+    position: absolute;
+    width: 450px;
+    height: 800px;
+    /* Adjust according to your images' height */
+    overflow: hidden;
+    pointer-events: none;
+    /* display: none; */
+}
+
+#flag-frame {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.flag-checkpoint {
+    position: relative;
+    width: 400px;
+    /* Adjust width according to your design */
+    height: 100px;
+    /* Adjust height if necessary */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: -4em;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.checkpoint {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+    position: relative;
+}
+
+.checkpoint.active {
+    background-color: #B19132;
+    /* The color for the active checkpoint */
+}
+
+.flag {
+    position: absolute;
+    top: -10px;
+    width: 35px;
+    height: 35px;
+    transition: left 0.5s ease;
+}
+
+.flag img {
+    width: 100%;
+    height: auto;
+}
+
+/* @media only screen and (max-width: 900px) { */
+    .store_details_form input[type=text], .input_field_default{
+        height: auto;
+        padding-top: .4em;
+        padding-bottom: .2em;
+    }
+
+    .tooltipSelector {
+        width: 15px;
+        height: 15px;
+        background: #ffffff;
+        position: absolute;
+        bottom: 5.8em;
+        right: .8em;
+        cursor: pointer;
+    }
+
+    select::-ms-expand { display: none; }
+select {
+    box-shadow:none;   
+    outline:none;      
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #ffffff;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);
+    background-repeat: no-repeat;
+    background-position-x: 45px;
+    background-position-y: 0px;
+    border: 1px solid #dfdfdf;
+    padding: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: .4em;
+    width: 44px;
+}
+
+.dropdownSizeShirt{
+    width: 100%;
+    background-position-x: 98%;
+    background-position-y: 5px;
+    text-align: center;
+    /* padding-left: 4em; */
+}
+
+.provinceContainer {
+    display: flex;
+    align-items: start;
+    gap: 1em;
+    justify-content: center;
+}
+
+
+.age_gate_submit_btn, .quiz_finish_btn, .giftcard_submit_btn, .education_portal_submitBtn, .sellsheet_btn_confirm, .startOverQuiz{
+    line-height: 47px;
+}
+
+.store_details_form input[name="store_pincode"] {
+    margin-top: 0em;
+    }
+
+
+    .multiple_choice p {
+        color: #ffffff;
+        font-family: 'DINBold';
+        font-style: normal;
+        border: 1px solid #fff;
+        max-width: 300px;
+        min-width: 300px;
+        padding: 1em 1em;
+        padding-bottom: 0.6em;
+        line-height: 35px;
+        font-size: 25px;
+        cursor: pointer;
+        text-transform: uppercase;
+        display: flex;
+        white-space: nowrap;
+        /* letter-spacing: -4px; */
+        justify-content: center;
+        align-items: center;
+        gap: .3em;
+    }
+
+    .quiz_submit_btn {
+        height: 50px;
+        /* margin-top: 4em; */
+        line-height: 59px;
+        margin-top: 1.3em;
+    }
+
+    #arrow-down-lottie {
+        position: absolute;
+        right: 0;
+        top: 50%; /* Position the top edge of the element at the middle of the page */
+        transform: translateY(-50%); /* Move it up by 50% of its height to truly center it */
+        width: 300px;  /* Adjust as necessary */
+        height: 300px; /* Adjust as necessary */
+    }
+    
